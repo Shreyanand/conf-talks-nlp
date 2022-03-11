@@ -1,0 +1,1171 @@
+welcome to another operate first data
+science community meetup i am akangsha
+i'm a data scientist in the ai ops team
+and today we have surya who's also a
+data scientist in the ai ops team he's
+going to talk about the anomaly
+detection using the hierarchical
+temporal memory algorithm on the operate
+first cpu data
+so over to you surya
+thank you very much
+can everybody see my slide
+yes all right so thank you very much
+akangsa
+hi everyone this is surya prakash pathak
+a data scientist in ai ops team and now
+open services team working with manager
+michael clifford and today i want to
+give you a brief intro about working
+principle of hierarchical temporal
+memory and its application to animal
+detection
+now today's talk include
+a brief comparison of creep neural
+networks
+which it with hdm and which is then
+followed by the introductions about
+hierarchical temporal memory and its
+working mechanisms i will then conclude
+my talk by giving you a brief intro
+about and many detections and showing a
+little bit demo about how i applied this
+hdm algorithm in detecting the animale
+in cpu uses data from operate first
+cluster
+so artificial intelligence whenever i
+talk about artificial intelligence deep
+neural networks has
+comes in picture um so deep neural
+networks have immense applications in
+different industrial fields be it
+healthcare be technology like fraud
+detections and so on so but it does have
+a lot of imp limitations as well like it
+needs thousands if not millions samples
+to train on
+it find very hard to adapt to
+continually changing data and surprises
+and it is also susceptible to noise and
+easily can be fooled
+the source that are linked over there
+is a paper depicting where
+a group of scientists
+pasted a structure pasted a sticker on
+the traffic signs like stop signs and
+they fool the machine learning system
+in classifying the object
+uh you can check that paper over there
+as well
+so so therefore deep learning deep
+neural networks instead of artificial
+intelligence can be
+said as a framework for assistive
+intelligence more so it does not work as
+our brain does and cannot lead to the
+true artificial intelligence
+htm hierarchical temporal memory
+which is a theoretical framework for
+both biological and generalized machine
+learnings it is based on the latest
+understanding of neocortex neocortex is
+a part of our human brain
+it only requires few hundreds of samples
+to learn
+one of the important characteristics is
+learn
+it learns unsupervised as it goes and
+easily handles changing data and
+surprises
+it is immune to up to forty percent of
+noise in the data htm as the name
+suggests is
+it's a hierarchical it's composed of
+levels of stack cells which work on
+the algorithm the temporal it operates
+on time series data
+and memory it does not
+just relies on the present instant of
+the data but relies also on the memory
+or the previous state of the data as
+well
+and this really opens the way for truly
+intelligent systems
+now let us talk a bit about how it
+got in picture got into the present
+day it is in
+so
+jeff hawkings who
+originally invented a palm pilot which
+is something like a very primitive
+smartphone like devices uh jeff hawkins
+and sandra balsky wrote on intelligence
+book on 2004
+explaining about the mechanism of human
+brain how it remembers
+different things
+and what intelligence is
+the core concept of hierarchical
+temporal memory in that book in 2005
+they he formed a research lab which
+which works on the reverse engineer
+engineering of the neocortex so he
+wanted to understand the working
+mechanism of neocortex so that he can
+apply it to the technology framework
+in 2014 this project got open sourced
+with the github handle new new pic
+uh the api over here used is python 2.7
+and c plus plus in 2015 uh there's a
+community fork of newpic.core got
+developed
+known as htm.core with api of python 3.7
+plus and c plus plus
+in 2031 a thousand brains theory of jeff
+hawkings that is the new book that got
+published recently and here you can find
+further explanations of uh more detailed
+mechanisms of how htm algorithm works
+and how it is in direct correspondence
+to how our human being works
+so as jeff hawking says sm
+is it is
+it is really directing to the true uh
+intelligence system
+and htm or numenta is constantly
+evolving with numenta open research
+so neocortex we talked about htm being a
+conceptually similar to the neocortex
+what is neocortex neocortex is the part
+that you are seeing the picture it's a
+part of the brain covering the brain
+it's the size of the large table napkin
+which is like 50 by 50 square
+centimeters
+that's it uh whatever i do whatever i
+think
+how i behave completely dependence on
+completely depends on this neocortex
+whatever i'm speaking right now whatever
+you are listening right now it's it's
+all because of this neocortex
+and it
+it consists of 75 percent of the brain's
+volume which is 2.5 millimeter thick
+it contains almost
+20 billion neurons tens of thousands of
+synapses per neurons synapse are the
+intersections just to be clear
+intersections which
+which acts as a memory or
+some
+spike in the neuron
+one of the important characteristic
+is it is sparsely active now we just
+said there are 20 billion neurons but
+also in a billion neurons does not take
+part at once in activity in any activity
+so only two percent of spiking of the
+neuron takes place at one particular
+time
+and it's constantly predicting its input
+and this is also a fascinating feature
+about human brain uh which i also
+came to know like our brain is
+constantly predicting
+if you are
+if you are going somewhere you are
+predicting that you are reached there in
+that moment of time if you are talking
+to somebody you are predicting some some
+input from others as well so whatever
+you do it's it's always a prediction and
+if the prediction does not
+work perfectly you'll learn something
+new so that's how the memory gets added
+in your brain and that's how you become
+more experienced
+and it learns the model of the world
+that's how it learns the more of the
+world by predicting constantly new
+things
+so more into the neocortex how does the
+neocortex looks like this is another
+fascinating feature
+all areas in the neocortex looks the
+same
+which means the neocortex that is
+connected to my eye
+and the neocortex that is connected to
+my ear
+they are same
+which actually means they perform the
+same basic function
+computationally speaking they have the
+same basic algorithm
+so let's say i'm speaking at the moment
+um you are hearing something you are
+seeing me
+you are
+your eye
+is transferring my image in my in your
+brain
+air is transferring my voice in your
+brain
+although the nerve that acts as an
+encoder from the eye to the brain and
+ear to the brain
+that encoder encodes
+in the same format when it reaches the
+neo cortex that's pretty fascinating
+feature which we have in our brain
+so
+the main thing is we have the same
+algorithm everything works in the same
+algorithm
+so what makes one region visual and
+another touch depends upon what nerve
+they are connected to
+nerve
+i can correlate it with the what encoder
+machine that they are connected to
+the basic unit of replications is the
+cortical column which we can see in the
+picture each individual column one
+millimeter square each
+and we have about two million of them
+like
+so logically a cortical column is the
+basic unit of computation
+if you move deeper into the cortical
+column
+we can see
+thousands of neurons over here
+and we can also see different layers of
+neurons over here
+this is the real image of cortical
+column where we have different layers of
+neuron so basically a cortical column
+has different layers of neuron arranged
+in a different mini columns
+and these neurons are connected both
+horizontally and vertically
+so anyway the the transfer of
+information scan takes place
+it is very complex
+thing so whatever the column does must
+also be complex and whatever the column
+does so does the neocortex that means
+each cortical column has a very complex
+characteristics which means the
+neocortex has a complex algorithm
+if we move on
+coming back to the deep neural net
+neuron uh the figure on the right hand
+side is
+uh is a based on 1957 concept of
+perceptron where we have weights we have
+inputs and these weights which are
+generally
+compared with the synapses they are
+summed up in a neuron
+like format and to get the output we
+pass it through the activation function
+which are generally non-linear so that's
+how the
+process takes place basic process takes
+place it is then
+uh converted into this deep learning
+neurons composed of
+large hidden layers which
+has which in turn has many applications
+so the basic concept behind this deep
+neural networks
+are the arrangement of weights
+in the learning process
+but
+our human brain does not behave like
+this we don't have any weight feature
+inside our brain and jeff hawkings what
+he wanted to do is we don't he does not
+want it to mimic this weight feature
+in the technology instead he wanted to
+mimic the
+the
+brain mechanism in the algorithm
+let's move forward
+so what is the structure of the real
+neuron the structure on the right hand
+side depicts the real neuron it has
+dendrites
+it has axon
+and it has proximal dendrites at the
+center
+now
+sinuses are the intersections there are
+5k to 30k excitatory synapse in the
+dendrites
+now out of these synapses
+10
+can cause neural spike
+so there is only out of these much out
+of 100
+only 10 percent which are in the
+proximity of the cell
+cause a neural spike
+now for many years people didn't know
+about
+what this 90 percent of distal synapses
+does
+are they just there for
+being there or do they have any kind of
+significance
+well it turns out that these
+dendrites are called which are called
+distilled in rights
+pattern detectors
+they do not
+make a neural spike instead
+they
+transform the neuron transform the
+point into the predictive state
+now what is the predictive state is
+compared to the inactive neuron which
+does not have any spike and compared to
+the
+spiked neuron which is definitely
+predicting that form the intermediate
+state is the predictive state the
+predictive state is the one if
+if the similar input
+fires if the similar input reaches the
+brain or the neocortex or neuron
+then
+the neuron in the predictive state fires
+faster
+so if
+there is a higher chance of predicting
+something means
+the distal dendrites in the
+in the vicinity of neurons are in the
+predictive state
+if we move on
+how
+hdm
+is
+um compared with this brain
+working mechanism
+now htm is not
+don't attempt to model all aspect of
+biological neurons
+but
+they
+they only attempt to model some
+essential feature of the
+neocortex
+so as we have over here we have these
+layers of
+cells
+these are basically the grid cells which
+have come later on
+so these reach cells
+uh
+behave like the
+neurons
+these grid cells behave like the
+layers of neurons
+so htm neuron state depends on the
+position and number of activated signals
+not in the sum of ways so depending upon
+whether the given
+cell in this grid is activated or not
+it depends the given information is
+recorded
+now neural learning
+now
+one interesting thing about the synapses
+synapse whenever there is a formation of
+synapses it learns something new
+it stores information and if if if the
+brain does not want that information
+then
+the synapse is
+is disconnected so in that is in the
+biology sense however in the htm synapse
+htm algorithm sense we call it a
+permanence which is the synapse state
+a zero zero permanence is the state
+where dendrite and action are
+disconnected nothing is doing nothing
+the neuron is doing nothing however one
+state is
+the neuron is doing some work it is in
+the active state
+maybe in 0.3 it is some predictive state
+so this learning occurs by incrementing
+or decrementing the synapse permanence
+synapse is disconnected for a permanence
+under the threshold
+uh synapse is connected for a permanence
+over a trso so there is some threshold
+of threshold value related with the
+disconnection and the connection of
+these synapses
+if we move on
+so if we come back to the layer of
+cortical column and if we want to mimic
+these layers of cortical column with the
+sequence memory what we see over here is
+if we take a part of this let's say
+these are
+layers of neuron in a cortical column
+and we take this layers as the layers of
+different grid which we
+which we compare this with the neurons
+so as we can see the neurons in in some
+cells all the columns
+are active that is given by the dark
+side
+and in some cells only one neuron or two
+or three neurons are active per column
+this is called the sequence memory now
+if i do the top projections of this
+of this
+framework
+of this column framework
+and
+put the darker line for
+at least
+one active neuron in the grid
+then i'll form this type of
+representation
+if i see
+this
+uh listen
+if i see this structure in the top view
+and form a shape like this
+it will form a good grid structure which
+is called the sparse distributed
+representation and it is one of the most
+important concept in terms of
+hierarchical temporal memory
+to understand more about it
+what are sdrs or as sparse distributed
+representations
+sdrs are how brain solved the problem of
+representing knowledge it is used in the
+context of every aspect of cognitive
+functions
+we were discussing before like if if we
+if we if i hear something
+that information from my ear
+through some nerve goes to the brain it
+is encoded into something and that
+something is sparse distributed
+representation in terms of htm
+it is the representation that
+the algorithm can understand whatever
+input signal it is
+be it visuals be numeric be it
+categorical anything
+it can be converted into a sparse
+distributed representation and once it
+is converted into this sdrs
+the algorithm can understand other thing
+now each bit has a semantic meaning
+meaning if we have two sparse
+distributed representation as shown over
+here
+and if we see there is some overlap in
+these representations like over here
+like over here the more the overlap the
+more similar is the meaning of these
+representations
+like if i say
+the
+sparse distributed distributed
+representation of tea and coffee are
+much similar compared to
+tea and biscuit
+they are completely different
+now and its capacity is also very high
+like for 2048 bit vector
+and two percent are set that means two
+percent sparsity
+only two percent of the neurons are
+active
+we have 10 to the power 84 unique
+patterns
+and this capacity was
+a calculated using this formula
+given the number of bits that is 2048
+bits we have the number of on bits
+we have
+factorial
+divided by the number of offsets
+factorial
+now as we see these two representations
+with shared bits have some shared
+semantic informations comparing two
+representation is as simple as taking
+the intersections of two indices sets
+sparse distributed representations are
+inherently fault tolerant and noise
+tolerant representations
+if we move along
+now we have this past distributed
+representation we have this
+neuron
+from this we have this htm neuron from
+this hdm neuron we derive the different
+grid cells
+taking one grid cells over here
+and taking one column if i if i input
+some feet forward
+if i give some feed forward input to
+this thing to this column then what
+happens is all the neurons on this
+column
+gets fired that means gets active
+let us take two different cases
+the first is the case of no predictions
+and the second is the trace of
+predictions
+now let's just at time is it goes to
+zero
+my brain does not know anything my
+system does not know anything so it is
+completely inactive no neuron is active
+but at times it goes to one
+i input some feet forward uh i place
+some feet forward input over here due to
+which the neurons in those columns
+are active
+and this forms the space distributed
+representations of that particular feed
+forward input
+if i take another case
+which is a predicted input i already
+know that
+okay this particular feed forward input
+is coming along
+i should be ready i should predict
+something
+then
+the neurons in those columns single
+neurons since those columns we see over
+here one this corresponds to this this
+corresponds to this
+are
+in the predictive state
+so
+these neurons are predicting these
+neurons being in a predict state
+predictive state are actually predicting
+that my next stage as t is equals to 1
+will be
+the active columns
+and that actually happens over here at t
+is equals to one the predictive the
+predictions comes through
+so that the neurons and the
+corresponding columns becomes active
+now because this neurons in the
+corresponding columns becomes active
+in the next step at t is equals to 2 it
+has to predict something
+therefore it excites the nearby neuron
+which is near
+it like
+it excites the nearby neurons and
+changes them into the predictive state
+so that that these goes to two
+another column another neuron in another
+column may become active
+so this is how the sdr learns sequences
+and make predictions to what the next
+input sdr will be
+it is extremely robust
+and
+which has a 40 noise tolerant
+uh it is
+it is completely an unsupervised
+learning and it is a continuous learning
+in real time
+learns higher order sequences so let's
+take an example of uh
+example and see how it learns higher
+order sequences like abcd and xbcy let's
+see
+so
+we have this first case before learning
+where i
+i apply some feed forward inputs like a
+and this is the sparse distributed
+representation of a
+b this is the sparse distributed
+representation of b c
+d
+then again i
+train another uh series of uh
+values like x b c
+y
+now once it once the algorithm learns
+this series a b c d then x b c y
+once it learns as these things once i
+input a
+what should the algorithm do the
+algorithm should predict b right so
+therefore
+this
+firing all the neurons in the
+a by feed forward input will excite the
+neurons in the column of b
+now make sure there's only one neuron
+that gets fired in the column which is
+represented by b
+so as as as we know like
+b is represented by
+if by the
+by the particular column where the
+neuron is fired so this is the sparse
+representation of b
+now once it reaches b
+it then predicts c and this resembles
+this structure
+the column matches over here and once it
+reaches c it reaches d it predicts d and
+so on
+now if i if instead of a i input x now
+what happens over here is
+all the neurons gets fired this is my
+input over here now what it should be
+predicting it should also be predicting
+b
+it is still predicting b
+but
+now the neuron that is fired is in
+different row but in the same column
+similarly it is predicting c the neurons
+that is fired is in the different row
+but in the same column which represents
+the same c
+and this c
+is then predicting y
+more elaborately if i need to look into
+it
+what is happening is i'm placing
+the a input over here now these neurons
+are predicting
+b
+over here
+like these neurons are taking
+the configuration of b in the predictive
+state as we can see by the red points
+over here
+and the next input is
+b which is already predicted now because
+of
+this p predicted input it will then
+predict the next step c
+which has a similar representation over
+here
+now say for example if instead of a or x
+i input b
+now my algorithm does not know
+which b is this
+is it the b from a or is it the b from x
+let's see what's what it does over here
+so
+the b input
+excites the
+neurons that represents both
+c
+and c bar c prime and c double prime
+so both the neurons in these columns are
+excited over here
+similarly
+you get the c input now
+the neurons in the c input gets
+activated
+now this c input will then predict
+both d prime and y double prime
+as shown over here
+so this is one of the best and the most
+important characteristics of
+hdm
+the characteristics of multiple
+predictions
+say for example you are tossing a coin
+if you are tossing a coin
+your predictions has not only had your
+predictions is also 10
+so if you are detecting some anomaly in
+tossing a coin
+you you can either get head or you can
+either get tail
+so
+you also have that multiple predictions
+in that case and if something other than
+head or tail comes up that can be
+regarded as randomly
+similar similar is the case of
+throwing a dice it has six sided so it
+has six different predictions
+anything away from that
+it can be regarded as animali
+so talking about anomaly
+anomalies are the data points within the
+data sets that appear to deviate
+markedly from the expected output
+anomaly detection refers to the problem
+of finding patterns in data that don't
+conform to expected behavior
+so
+this is the
+results from the pneumenta
+where they have predicted the anomaly
+for metric for some
+machine temperature sensory data
+as we can see
+this point is quite out of range out of
+this user range and this point is also
+quite out of this user range these are
+just normal animals however the
+interesting thing is over here now as we
+can see if we just take the magnitude of
+this particular data then this point may
+not be regarded as dynamic however if we
+see the temporal sequence of this data
+there is something happening as we can
+see over here then this can be regarded
+as the nml
+in the next case
+i'll explain to you what is the
+flowchart of the animal injection used
+by htm
+so for an htm we have the input xt
+we convert that into the sparse
+distributed representation it goes
+through the algorithm it calculates the
+prediction error which is also known as
+anomaly score
+which is basically the fractions of
+active columns which we are not
+predicting
+mathematically that is the definition
+and prediction error or anomaly score
+are not
+the standard for detecting nml it is
+actually the annual likelihood
+which is calculated
+more by modeling the distributions of
+error
+values over the window of timestamp from
+the past
+so
+if we can take an mla score as the
+instantaneous animali
+anomaly likelihood can be regarded as
+much more concrete standard for
+detecting anomaly which takes the order
+of the past timestamp as well
+so once the input reaches the htm the
+encoder
+because of the encoder it converts the
+given input into a sparse distributed
+representation and it then it goes to
+spatial puller and sequence memory and
+gradually according to accordingly
+whatever it predicts the prediction
+error or
+or not and then the anomaly likelihood
+and based on the animal and likelihood
+will come to know whether the given data
+or the system has an anomaly or not
+we applied this algorithm in this
+operate first cpu users data
+now operate for cpu users data can be
+extracted using the thanos metrics
+and prometheus api client
+so details about it are given in this
+github link over here
+so once we once we extract the data from
+certain time period
+we will then
+apply our algorithm to
+see if there is anomaly that can that we
+can find in the cpu uses data or not
+so let's move on to the demo
+so here's the demo notebook and the code
+snippets are taken from the numenta
+github
+fork
+however i have formatted this notebook
+in with respect to jupiter
+notebook readable format um so let's
+move on so here are a couple of classes
+which we need to install which packages
+which we need to install htm packages
+the first set of data is cpu user data
+which we have is the increase that we
+have is 576
+the parameters value the default
+parameters value like the sparsity is
+two percent uh time weekend and
+permanence 0.1 all these parameters
+values are the default parameters value
+given by the numentar website
+so i'm just using those values
+as per the period is concerned the
+period is the system is the amount of
+time the system learns the amount of
+data we work before it starts trusting
+so if i consider my length of is 576
+if i take the period of 40 i'm just
+taking the considerable length of the
+period so that i can see some animal in
+the later point of the data but in
+principle the more the period the better
+it is which means the more the
+sample of the data the better it is
+so if we
+just run this notebook
+let's see how it
+looks
+so
+we calculate the anomaly score we
+calculate the animated likelihood and
+here we have the plots
+so here we have the input signal given
+by the green points here we have the
+anomaly likelihood signal now this
+anomaly likelihood is definitely higher
+over here
+higher over here which depicts that
+there is some anomaly at this point
+there is some animal at these points now
+if we consider animally score as well in
+the plot
+it will see something like this
+um let's wait for some time so yeah so
+this blue point is the animalia score
+now as we can see if we go with the
+anomaly score then almost all the points
+almost most of the points you see are
+regarded as the anomaly however that is
+not so animal likelihood is the main
+detector of the anomaly so if you go
+over animal likelihood we do see some
+animal points in the plot
+if we consider the real time analysis of
+this data
+we will see something like this the
+input signal in the green goes
+along and and there is a constant
+prediction that is done by the algorithm
+based on this input and predictions it
+calculates the animally score at first
+and at first the animal school is pretty
+huge because the system was has not
+learned anything the anomaly likelihood
+is pretty flat because the system does
+not know
+anything about animali
+so as it moves along it takes some
+anomaly on the process
+so this is how the
+streamlined data goes by if we
+if we take another
+set of data which is much
+larger than this
+let's see how it looks
+if we take another set of data
+so here we can see it is
+1679 entries which is also
+not pretty big but still like
+it's good for the demonstration uh i
+i've increased the number of periods by
+400
+so as so that the system can learn more
+so
+if i go to my plot again
+what i'll see is
+um
+here
+so you can also see this table here's
+the time here's the value for the cpu
+users
+at first the system has not predicted
+anything then the animated score is one
+in the beginning enemy likelihood is
+very very small in the beginning
+if we plot that those data over here we
+do see so this is the cpu uses values
+all over
+and the corresponding anomaly like
+animal is core given by blue points
+which shows that there's a huge
+there's a huge animal in the points
+but it is not the actual detector of
+anomaly the actual detector of the
+animal is animally likelihood given by
+the red
+and we do see some anomaly in the
+in the curve
+if we do the real-time analysis
+we do see
+the changing of signals
+so input signals given in green it goes
+away and the corresponding anomaly score
+is correspondingly calculated and the
+annual likelihood is again calculated
+accordingly so this is how we do the
+real-time analysis of the anomaly
+detection
+so
+going back to the presentation now
+so there are a couple of commercial
+applications of hdm as well
+now there's a team called clock stream
+which uses anomaly detection for
+commercial purposes
+there's a team called cortical.io
+which used
+this which uses this technology in
+nlp natural language processing and
+semantic analysis
+there's a team called intellect.com
+which is from which has originated from
+2020 and it is used to detect uh the
+stock market values
+and for us
+for a stock market prediction company to
+work for more than a year seems like a
+promising prospect
+so these are some applications of
+htm in animality detection and other
+industries
+so and most of the materials in this
+talk are covered from numentation.com
+and
+htm.core.com for community in github i
+would also like to thank
+martial health who have suggested me to
+read on intelligence books and
+which helped me to spike some of the
+neurons in my brain
+thank you very much for this
+[Music]
+thank you very much
+all the attendees for listening to the
+talk you can reach out to me at this
+email my linkedin my github page and if
+you want to follow my individual work
+the fork repository is htm applications
+in aico ei ops
+thank you very much
+uh i have a few questions if i may ask
+yes please so very enlightening talk and
+presentation uh i enjoyed very much uh
+everything that you have presented here
+when it comes now to the implementation
+that you have used
+if i because i try to make a parallel
+with uh traditional time series based
+anomaly detection
+and i'm sorry but i couldn't understand
+like what is the length of the sliding
+window you used in this scenario because
+i saw at some point use like something
+you changed to 400 so basically use the
+last 400 points in order to be able to
+predict future values
+yes so
+i'm not sure whether it's called a
+sightings window but
+well i just changed the period of uh the
+endometric parameter and the period
+signifies about
+the the main uh function of that period
+is how many data points can i take
+before the actual detection of the
+anomaly so
+numeta suggest me to
+take as much period as possible probably
+thousand but for that i need to have a
+lot of
+data sets so
+that's what i did
+um i'm sorry let me let me try to
+rephrase that because i'm not so sure if
+my message was passed on correctly to
+you uh so in traditional time series uh
+predictions uh you have a data set of
+length n
+and
+usually you take a sample of
+length t let's say five or ten something
+else let's use seconds okay the last
+five seconds in order to predict the
+next value right and uh
+but the data format has to be
+three-dimensional uh for any tensor to
+be able to work with it if you use
+tensorflow for example so the third
+dimension is basically the number of
+features that you use if it's a
+univariate time solution obviously it's
+one motivated like how many of those you
+have uh so in your case and like the
+entire data set that you had like how
+long it was the
+number of the values that you use in
+order to predict the next value how long
+it was and the last question i have is
+starting at some point in time let's say
+p0 you know with
+that amount of value let's see last five
+seconds or 10 seconds or how many you
+used in order to train your
+your network
+um how far in the future can you go
+before you take a new
+check of the real world you know to see
+like how far off your predictions are
+you know i can you go like just one
+second can you go five seconds or ten
+seconds in the future you know this is a
+a point of interest you know that i'm
+i'm actually also doing some research in
+all the time series so that's why i'm
+asking all these questions
+yeah that's a very good questions
+actually because i
+well personally i have not
+checked it like one by one how far it
+should go at the moment i'm
+just looking at whether
+it can predict something or not uh to
+tell you about
+the predictions
+i have predicted
+in the first step and the fifth stage so
+i'm taking a
+fight
+five-time step window okay at the moment
+for the predictions so
+but regarding your questions i may need
+to work in this a bit so that i can
+answer that perfectly
+okay so i put my questions in the chat
+uh you may have a look at them and uh
+when you have an answer you know that
+you could you know uh suggest back
+something then uh please uh respect me
+because i'm really interested in this
+i mean if you can also share the the
+notebook that you presented then maybe i
+can find the answer myself over there
+you know so uh oh yeah you can maybe
+collaborate for something in the future
+awesome awesome that would be great yeah
+thank you for your time and thank you
+once again for the great presentation
+thank you very much thank you
+thank you surya for this amazing
+presentation i think shay also had a
+question
+um shane would you want to ask this
+question yourself
+yeah so
+uh when you were presenting the slide
+with
+sequence prediction i had posted a
+question about like
+how much memory what memory
+would it take to represent one letter
+so it seemed like we had a grid
+or
+like neurons and then
+each neuron would light up and then we
+would know that it was an a or something
+like that but to do that we had to
+represent each
+letter
+with a
+great right so i was wondering
+let's say you know the idea
+sorry uh the idea over here is like
+say for example as a
+as i understand from your questions
+to
+to exp to encode the name apple
+as you said i need to encode a b b l e
+right that's what app
+you are saying that we need to
+individually encode each letter right
+right that's right right but that is not
+the case
+so for each word each different
+representation
+like a may have different
+representation in 2048 bit of grid cells
+okay apple may have different
+representation so it's
+each individualistic uh
+each representation is unique in each
+case
+yeah okay
+it's like um the hash function
+yeah yeah that's what i was thinking so
+there will be collisions right like yeah
+overlapping but
+yes that's that's also the point because
+if i say
+fruit or
+apple or banana right they fall under
+the fruit
+column right fruit group
+so they should have some overlap because
+there is some similarity in terms of
+food but they're saying
+space they would yeah
+together
+they will be
+they will have some overlap they don't
+they do not have complete overlap they
+should not have complete overlap but
+they will have some overlap now if i am
+talking about two mutually exclusive
+events
+their overlap is completely zero there
+is nothing which represents their
+the two objects are completely distinct
+from each other
+and that translates to the cpu usage
+application that you talked about in the
+way that
+we have
+a
+representation of certain types of
+spikes
+close together in the embedded space
+whereas
+some flags close together in the
+americas
+okay
+good
+yeah thank you
+thank you for the question
+all right do we have any more questions
+for surya
+okay awesome thank you again surya for
+an amazing presentation and thank you to
+all of you for attending this meetup uh
+we will send you an updated email with a
+presentation and the video recording and
+hope to see you guys again after two
+weeks thank you
+thank you everyone
+
